@@ -18,8 +18,6 @@ DigitalOut C4(p26);
 //LED for Alarm
 DigitalOut LED(p25);
 
-
-
 //project, initialize all functions to be used
 static unsigned char wr_lcd_mode(char c, char mode);
 unsigned char lcd_command(char c);
@@ -122,11 +120,9 @@ int main() {
 	controller();
 
 	//test to see if LCD works
-	//lcdLoad("hello world", ' ', sizeof("hello world"), 2, 0);
-		
+	//lcdLoad("hello world", ' ', sizeof("hello world"), 2, 0);		
 		
 }
-
 
 void lcdLoad(char a[], char c, int size, int line, int select){
 	int location;
@@ -291,8 +287,6 @@ void controller(){
 	}
 }
 	
-
-
 //part B
 void displayAlphabet(){
 	lcd_command(0x01);
@@ -499,9 +493,7 @@ void setClock(int select){
 		i2c.write(0); // clear the osf, alarm flags
 		i2c.stop();
 	
-	}
-	
-	
+	}		
 }
 
 //function to get one character from keypad
@@ -946,8 +938,6 @@ int normalMode(){
 	//display  current date and temp
 	
 	return 0;
-	
-
 }
 
 
@@ -1055,9 +1045,9 @@ int getSize(int result){
 //set keypad orientation
 int getNum(int rowNum, int colNum){
 		int numOrder[4][4] = {{1,2,3,10}, 
-												 {4,5,6,11}, 
-												 {7,8,9,12}, 
-												 {0,15,14,13}};
+				 	{4,5,6,11}, 
+					 {7,8,9,12}, 
+					 {0,15,14,13}};
 		
 		return numOrder[rowNum-1][colNum-1];
 }
