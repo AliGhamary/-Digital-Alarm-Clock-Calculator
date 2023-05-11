@@ -1,4 +1,4 @@
-# Digital Alarm Clock and Calculator
+# Embedded System Multifunctional Clock
 
 This is the code for an ARM microprocessor project
 
