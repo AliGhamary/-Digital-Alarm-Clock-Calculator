@@ -1,6 +1,6 @@
 # Embedded System Multifunctional Clock
 
-This is the code for an ARM microprocessor project
+This is the code for an ARM microprocessor embedded system project
 
 - Code is executed on an LPC4088 microcontroller
 
